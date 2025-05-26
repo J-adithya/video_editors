@@ -242,5 +242,6 @@ with gr.Blocks(theme="soft") as demo:
                 inp.change(process_image, inputs=inputs, outputs=output_image)
             clear_button.click(reset_parameters, outputs=[brightness, contrast, hue, saturation, flip, grayscale, rotate, blur, sharpen, crop])
 
-demo.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 8080)))
+demo.launch(server_name="127.0.0.1", server_port=8080)
+
 
